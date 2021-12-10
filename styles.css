@@ -24,7 +24,7 @@ body {
   background-repeat: no-repeat;
   /* background-size: cover; */
 }
-.container {
+.container-home {
   display: grid;
   grid-template-columns: 5fr 1fr;
   grid-template-rows: repeat(3, auto);
