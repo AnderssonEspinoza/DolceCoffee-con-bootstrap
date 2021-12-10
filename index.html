@@ -1,18 +1,110 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Poppins:wght@300;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Dolce Coffee</title>
 </head>
 
-<body>
-    <div class="container">
-        <div></div>
-        <div></div>
-        <div></div>
+<body class="body body-home">
+
+    <div class="container container-home">
+
+        <!-- Background image -->
+        <img class="img-home" src="assets/images/coffee-home-2.png" alt="taza de cafe">
+        <!-- ------------------- -->
+
+        <!-- Background-image-2 -->
+        <img src="assets/images/purr-cat-with-cup.png" alt="" class="img-home-2">
+        <!-- ------------------ -->
+
+        <!------------------- Inicio del header -------------------->
+        <header class="header header-home">
+            <!-- Logo -->
+            <div class="home-logo">
+                <a href="index.html">
+                    <img src="assets/images/coffee-logo-2.png" alt="logo coffee" class="img-logo">
+                </a>
+            </div>
+            <!-- Logo -->
+
+            <!------------ Navigation menu ----------->
+            <nav class="menu-nav">
+                <!-- Icon Menu-bar responsive -->
+                <label for="menu" class="nav-label">
+                    <img src="assets/icons/menu.svg" alt="bar icon" class="nav-img">
+                </label>
+                <input type="checkbox" id="menu" class="nav-input">
+                <!-- ----------------------- -->
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/productos.html">Productos</a></li>
+                    <li><a href="pages/sobre_nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="pages/opiniones.html">opiniones</a></li>
+                    <li><a href="pages/contactos.html">Contactos</a></li>
+                </ul>
+            </nav>
+            <!-- ------------------------------------------ -->
+            <div class="shop-register">
+                <a href="#" class="icon-shop">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a href="#" class="icon-register">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+        </header>
+        <!--------------------- Fin del header -------------------------->
+
+
+        <!-------- Inicio del main ----------->
+        <main class="main-home">
+            <div class="title-description-home">
+                <h1 class="name-coffeshop">
+                    DOLCE COFFEE
+                </h1>
+                <p class="description-home">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore dolor saepe excepturi optio odio.
+                    Quia
+                    beatae eaque, natus vel aliquam facilis.
+                </p>
+                <div class="order">
+                    <button type="button" class="order-button">Ordenar Ahora</button>
+                </div>
+            </div>
+        </main>
+        <!----------- Fin del main ---------->
+        <div class="icons-rsocials">
+            <a href="#" class="f-icon">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="ig-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="tw-icon">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+
+        <!------- Inicio del footer--------- -->
+        <footer class="footer">
+            <p class="footer-copyr">
+                © Todos los derechos reservados 2021-2030
+            </p>
+        </footer>
+        <!------------- Fin del footer  ----------->
     </div>
 </body>
 
