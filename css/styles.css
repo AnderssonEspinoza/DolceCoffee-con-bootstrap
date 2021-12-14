@@ -9,25 +9,27 @@ body {
   font-weight: bold;
   color: #3f3f3f;
 }
-
 #menu form > button {
   font-size: 18px;
   font-weight: bold;
 }
-
 .title-home {
   color: #fff;
-  /* font-size: 3rem; */
   font-size: calc(1.525rem + 3.3vw);
 }
 .img-home-1 {
   display: none;
 }
+.coffee {
+  width: 100px;
+}
+.products > div {
+  width: 300px;
+}
 @media screen and (min-width: 900px) {
   .img-home-2 {
     display: none;
   }
-
   .img-home-1 {
     display: block;
     transform: rotate(-65deg);
