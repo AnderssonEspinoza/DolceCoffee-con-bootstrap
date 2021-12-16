@@ -4,10 +4,13 @@ body {
 }
 
 /* ===========Menu========== */
+#menu {
+  border-bottom: 2px solid gray;
+}
 #menu li > a {
   font-size: 18px;
   font-weight: bold;
-  color: #3f3f3f;
+  color: white;
 }
 #menu form > button {
   font-size: 18px;
@@ -34,4 +37,24 @@ body {
     display: block;
     transform: rotate(-65deg);
   }
+
+  .img-about-1,
+  .img-about-2 {
+    max-width: 520px;
+  }
+
+  .logo-about {
+    max-width: 350px;
+  }
+
+  body {
+    min-height: 100vh;
+  }
+  /* .container-contactos {
+    height: 100%;
+  }
+
+  .contactos-block {
+    height: 100vh;
+  } */
 }
