@@ -2,10 +2,9 @@ body {
   overflow-x: hidden;
   background: black;
 }
-
 /* ===========Menu========== */
 #menu {
-  border-bottom: 2px solid gray;
+  border-bottom: 2px solid rgba(247, 216, 169, 0.5);
 }
 #menu li > a {
   font-size: 18px;
@@ -29,6 +28,25 @@ body {
 .products > div {
   width: 300px;
 }
+.text-area-contactos {
+  resize: none;
+}
+.nav-item > a {
+  --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+.nav-item a::after {
+  content: "";
+  display: block;
+  width: 53px;
+  height: 3px;
+  background: rgb(212, 178, 27);
+  clip-path: var(--clippy);
+  transition: clip-path 0.7s;
+}
+.nav-item > a:hover {
+  --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
 @media screen and (min-width: 900px) {
   .img-home-2 {
     display: none;
@@ -36,25 +54,19 @@ body {
   .img-home-1 {
     display: block;
     transform: rotate(-65deg);
+    z-index: -10;
   }
-
   .img-about-1,
   .img-about-2 {
     max-width: 520px;
   }
-
   .logo-about {
     max-width: 350px;
   }
-
   body {
     min-height: 100vh;
   }
-  /* .container-contactos {
-    height: 100%;
+  .nav-item a::after {
+    width: 95%;
   }
-
-  .contactos-block {
-    height: 100vh;
-  } */
 }
