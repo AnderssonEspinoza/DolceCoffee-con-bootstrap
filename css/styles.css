@@ -1,50 +1,106 @@
+/* ===========Menu========== */
+@-webkit-keyframes animar {
+  0% {
+    -webkit-transform: translateY(-280px);
+            transform: translateY(-280px);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  80% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+@keyframes animar {
+  0% {
+    -webkit-transform: translateY(-280px);
+            transform: translateY(-280px);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  80% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
 body {
   overflow-x: hidden;
   background: black;
 }
-/* ===========Menu========== */
+
 #menu {
   border-bottom: 2px solid rgba(247, 216, 169, 0.5);
 }
+
 #menu li > a {
   font-size: 18px;
   font-weight: bold;
   color: white;
 }
+
 #menu form > button {
   font-size: 18px;
   font-weight: bold;
 }
+
 .title-home {
-  color: #fff;
   font-size: calc(1.525rem + 3.3vw);
 }
+
 .img-home-1 {
   display: none;
 }
+
 .coffee {
   width: 100px;
 }
+
 .products > div {
   width: 300px;
 }
+
 .text-area-contactos {
   resize: none;
 }
+
 .nav-item > a {
   --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
 }
+
+.nav-item > a:hover {
+  --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
 .nav-item a::after {
   content: "";
   display: block;
   width: 53px;
   height: 3px;
-  background: rgb(212, 178, 27);
-  clip-path: var(--clippy);
+  background: #d4b21b;
+  -webkit-clip-path: var(--clippy);
+          clip-path: var(--clippy);
+  -webkit-transition: -webkit-clip-path 0.7s;
+  transition: -webkit-clip-path 0.7s;
   transition: clip-path 0.7s;
+  transition: clip-path 0.7s, -webkit-clip-path 0.7s;
 }
-.nav-item > a:hover {
-  --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+.img-home-2 {
+  -webkit-animation: animar 4s 1 linear;
+          animation: animar 4s 1 linear;
 }
 
 @media screen and (min-width: 900px) {
@@ -53,10 +109,13 @@ body {
   }
   .img-home-1 {
     display: block;
-    transform: rotate(-65deg);
+    -webkit-transform: rotate(-65deg);
+            transform: rotate(-65deg);
     z-index: -10;
   }
-  .img-about-1,
+  .img-about-1 {
+    max-width: 520px;
+  }
   .img-about-2 {
     max-width: 520px;
   }
@@ -70,3 +129,4 @@ body {
     width: 95%;
   }
 }
+/*# sourceMappingURL=styles.css.map */

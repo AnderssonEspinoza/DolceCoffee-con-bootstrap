@@ -1,0 +1,103 @@
+/* ===========Menu========== */
+@keyframes animar {
+  0% {
+    transform: translateY(-280px);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+body {
+  overflow-x: hidden;
+  background: black;
+}
+#menu {
+  border-bottom: 2px solid rgba(247, 216, 169, 0.5);
+  li {
+    > a {
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+    }
+  }
+  form {
+    > button {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+}
+.title-home {
+  font-size: calc(1.525rem + 3.3vw);
+}
+.img-home-1 {
+  display: none;
+}
+.coffee {
+  width: 100px;
+}
+.products {
+  > div {
+    width: 300px;
+  }
+}
+.text-area-contactos {
+  resize: none;
+}
+.nav-item {
+  > a {
+    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    &:hover {
+      --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+  a {
+    &::after {
+      content: "";
+      display: block;
+      width: 53px;
+      height: 3px;
+      background: rgb(212, 178, 27);
+      clip-path: var(--clippy);
+      transition: clip-path 0.7s;
+    }
+  }
+}
+.img-home-2 {
+  animation: animar 4s 1 linear;
+}
+@media screen and (min-width: 900px) {
+  .img-home-2 {
+    display: none;
+  }
+  .img-home-1 {
+    display: block;
+    transform: rotate(-65deg);
+    z-index: -10;
+  }
+  .img-about-1 {
+    max-width: 520px;
+  }
+  .img-about-2 {
+    max-width: 520px;
+  }
+  .logo-about {
+    max-width: 350px;
+  }
+  body {
+    min-height: 100vh;
+  }
+  .nav-item {
+    a {
+      &::after {
+        width: 95%;
+      }
+    }
+  }
+}
