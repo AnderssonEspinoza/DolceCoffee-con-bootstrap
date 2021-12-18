@@ -1,0 +1,29 @@
+@media screen and (min-width: 900px) {
+  .img-home-2 {
+    display: none;
+  }
+  .img-home-1 {
+    display: block;
+    transform: rotate(-65deg);
+    z-index: -10;
+  }
+  .img-about-1 {
+    max-width: 520px;
+  }
+  .img-about-2 {
+    max-width: 520px;
+  }
+  .logo-about {
+    max-width: 350px;
+  }
+  body {
+    min-height: 100vh;
+  }
+  .nav-item {
+    a {
+      &::after {
+        width: 95%;
+      }
+    }
+  }
+}

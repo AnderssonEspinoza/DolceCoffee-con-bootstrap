@@ -1,35 +1,29 @@
-/* ===========Menu========== */
-@keyframes animar {
-  0% {
-    transform: translateY(-280px);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  80% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
+@import "clippynav-animation";
+// Variables
+$mostaza: rgba(247, 216, 169, 0.5);
+$blanco: #fff;
+$amarillo: rgb(212, 178, 27);
+$negro: #000;
+
 body {
   overflow-x: hidden;
-  background: black;
+  background: $negro;
 }
 #menu {
-  border-bottom: 2px solid rgba(247, 216, 169, 0.5);
+  border-bottom: 2px solid $mostaza;
   li {
-    > a {
+    a {
       font-size: 18px;
       font-weight: bold;
-      color: white;
+      color: $blanco;
     }
   }
   form {
-    > button {
-      font-size: 18px;
-      font-weight: bold;
+    button {
+      &:active,
+      &:hover {
+        background-color: $amarillo;
+      }
     }
   }
 }
@@ -42,62 +36,14 @@ body {
 .coffee {
   width: 100px;
 }
+
 .products {
-  > div {
+  div {
     width: 300px;
   }
 }
 .text-area-contactos {
   resize: none;
 }
-.nav-item {
-  > a {
-    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
-    &:hover {
-      --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
-  }
-  a {
-    &::after {
-      content: "";
-      display: block;
-      width: 53px;
-      height: 3px;
-      background: rgb(212, 178, 27);
-      clip-path: var(--clippy);
-      transition: clip-path 0.7s;
-    }
-  }
-}
-.img-home-2 {
-  animation: animar 4s 1 linear;
-}
-@media screen and (min-width: 900px) {
-  .img-home-2 {
-    display: none;
-  }
-  .img-home-1 {
-    display: block;
-    transform: rotate(-65deg);
-    z-index: -10;
-  }
-  .img-about-1 {
-    max-width: 520px;
-  }
-  .img-about-2 {
-    max-width: 520px;
-  }
-  .logo-about {
-    max-width: 350px;
-  }
-  body {
-    min-height: 100vh;
-  }
-  .nav-item {
-    a {
-      &::after {
-        width: 95%;
-      }
-    }
-  }
-}
+// Media query
+@import "mediaquery";
