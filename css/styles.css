@@ -82,6 +82,10 @@ body {
   background-color: #d4b21b;
 }
 
+.button_shopnow button:active, .button_shopnow button:hover {
+  background-color: #d4b21b;
+}
+
 .title-home {
   font-size: calc(1.525rem + 3.3vw);
 }
@@ -100,6 +104,25 @@ body {
 
 .text-area-contactos {
   resize: none;
+}
+
+.nuestro-menu span {
+  color: #d3ad7f;
+}
+
+.products-items:hover {
+  background-color: #bdb8b8;
+  color: #000;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.products-items button:hover {
+  letter-spacing: 0.1rem;
+  font-weight: 700px;
+  color: #000 !important;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 @media screen and (min-width: 900px) {

@@ -4,6 +4,7 @@ $mostaza: rgba(247, 216, 169, 0.5);
 $blanco: #fff;
 $amarillo: rgb(212, 178, 27);
 $negro: #000;
+$mostaza-2: #d3ad7f;
 
 body {
   overflow-x: hidden;
@@ -27,6 +28,14 @@ body {
     }
   }
 }
+.button_shopnow {
+  button {
+    &:active,
+    &:hover {
+      background-color: $amarillo;
+    }
+  }
+}
 .title-home {
   font-size: calc(1.525rem + 3.3vw);
 }
@@ -44,6 +53,26 @@ body {
 }
 .text-area-contactos {
   resize: none;
+}
+.nuestro-menu {
+  span {
+    color: $mostaza-2;
+  }
+}
+.products-items:hover {
+  background-color: rgb(189, 184, 184);
+  color: #000;
+  transition: all 0.8s;
+}
+.products-items {
+  button {
+    &:hover {
+      letter-spacing: 0.1rem;
+      font-weight: 700px;
+      color: $negro !important;
+      transition: all 0.4s;
+    }
+  }
 }
 // Media query
 @import "mediaquery";
