@@ -63,6 +63,11 @@
   }
 }
 
+.image-logo, .navbar-brand img {
+  width: 70px;
+  height: 70px;
+}
+
 body {
   overflow-x: hidden;
   background: #000;
@@ -119,7 +124,7 @@ body {
 
 .products-items button:hover {
   letter-spacing: 0.1rem;
-  font-weight: 700px;
+  font-weight: bold;
   color: #000 !important;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
@@ -133,7 +138,6 @@ body {
     display: block;
     -webkit-transform: rotate(-65deg);
             transform: rotate(-65deg);
-    z-index: -10;
   }
   .img-about-1 {
     max-width: 520px;

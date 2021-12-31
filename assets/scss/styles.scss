@@ -1,11 +1,8 @@
-@import "clippynav-animation";
 // Variables
-$mostaza: rgba(247, 216, 169, 0.5);
-$blanco: #fff;
-$amarillo: rgb(212, 178, 27);
-$negro: #000;
-$mostaza-2: #d3ad7f;
-
+@import "components/variables";
+//Clippy-navbar
+@import "components/clippynav-animation";
+@import "global/base";
 body {
   overflow-x: hidden;
   background: $negro;
@@ -36,6 +33,11 @@ body {
     }
   }
 }
+.navbar-brand {
+  img {
+    @extend .image-logo;
+  }
+}
 .title-home {
   font-size: calc(1.525rem + 3.3vw);
 }
@@ -59,20 +61,25 @@ body {
     color: $mostaza-2;
   }
 }
-.products-items:hover {
-  background-color: rgb(189, 184, 184);
-  color: #000;
+@mixin hover-tarjets($color1, $color2) {
+  background-color: $color1;
+  color: $color2;
   transition: all 0.8s;
+}
+.products-items {
+  &:hover {
+    @include hover-tarjets($lightgray, $negro);
+  }
 }
 .products-items {
   button {
     &:hover {
       letter-spacing: 0.1rem;
-      font-weight: 700px;
+      font-weight: bold;
       color: $negro !important;
       transition: all 0.4s;
     }
   }
 }
 // Media query
-@import "mediaquery";
+@import "components/mediaquery";
