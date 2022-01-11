@@ -70,11 +70,11 @@
 
 body {
   overflow-x: hidden;
-  background: #000;
+  background: #171721;
 }
 
 #menu {
-  border-bottom: 2px solid rgba(247, 216, 169, 0.5);
+  border-bottom: 1px solid rgba(247, 216, 169, 0.5);
 }
 
 #menu li a {
@@ -83,19 +83,26 @@ body {
   color: #fff;
 }
 
-#menu form button:active, #menu form button:hover {
-  background-color: #d4b21b;
+#menu form input {
+  color: #fff;
 }
 
-.button_shopnow button:active, .button_shopnow button:hover {
-  background-color: #d4b21b;
+#menu form button {
+  color: #fff;
+}
+
+#menu form button:active, #menu form button:hover {
+  background-color: #ffc212;
+  color: #171721;
+  font-weight: 500;
 }
 
 .title-home {
   font-size: calc(1.525rem + 3.3vw);
 }
 
-.img-home-1 {
+.img-home-1,
+#image-home {
   display: none;
 }
 
@@ -116,28 +123,63 @@ body {
 }
 
 .products-items:hover {
-  background-color: #bdb8b8;
-  color: #000;
+  background-color: #fff;
+  color: #171721;
   -webkit-transition: all 0.8s;
   transition: all 0.8s;
+}
+
+.products-items button {
+  color: #1f222b;
 }
 
 .products-items button:hover {
   letter-spacing: 0.1rem;
   font-weight: bold;
-  color: #000 !important;
+  color: #171721;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
+#contactform input,
+#contactform textarea {
+  border-color: #e4d54e;
+}
+
+.list-contact i {
+  color: #ffc212;
+}
+
 @media screen and (min-width: 900px) {
+  .body-home {
+    height: 100vh;
+    background: #100e0e;
+  }
+  .container-home {
+    background: #201a1a;
+    width: 90%;
+    height: 90%;
+  }
   .img-home-2 {
     display: none;
   }
-  .img-home-1 {
+  .img-home-1,
+  #image-home {
     display: block;
-    -webkit-transform: rotate(-65deg);
-            transform: rotate(-65deg);
+  }
+  #image-home {
+    height: 400px;
+    z-index: 100;
+  }
+  .img-circle {
+    position: relative;
+  }
+  .circle {
+    background-color: #2d221e;
+    position: absolute;
+    width: 310px;
+    height: 310px;
+    border-radius: 50%;
   }
   .img-about-1 {
     max-width: 520px;
@@ -155,4 +197,13 @@ body {
     width: 95%;
   }
 }
-/*# sourceMappingURL=styles.css.map */
+
+@media screen and (min-width: 1400px) {
+  #image-home {
+    height: 650px;
+  }
+  .circle {
+    width: 410px;
+    height: 410px;
+  }
+}

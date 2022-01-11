@@ -1,11 +1,33 @@
 @media screen and (min-width: 900px) {
+  .body-home {
+    height: 100vh;
+    background: $bgcolor-body;
+  }
+  .container-home {
+    background: $bgcolor-container;
+    width: 90%;
+    height: 90%;
+  }
   .img-home-2 {
     display: none;
   }
-  .img-home-1 {
+  .img-home-1,
+  #image-home {
     display: block;
-    transform: rotate(-65deg);
-    // z-index: -10;
+  }
+  #image-home {
+    height: 400px;
+    z-index: 100;
+  }
+  .img-circle {
+    position: relative;
+  }
+  .circle {
+    background-color: #2d221e;
+    position: absolute;
+    width: 310px;
+    height: 310px;
+    border-radius: 50%;
   }
   .img-about-1 {
     max-width: 520px;
@@ -25,5 +47,15 @@
         width: 95%;
       }
     }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #image-home {
+    height: 650px;
+  }
+  .circle {
+    width: 410px;
+    height: 410px;
   }
 }

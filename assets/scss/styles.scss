@@ -7,8 +7,9 @@ body {
   overflow-x: hidden;
   background: $negro;
 }
+
 #menu {
-  border-bottom: 2px solid $mostaza;
+  border-bottom: 1px solid $mostaza;
   li {
     a {
       font-size: 18px;
@@ -17,22 +18,21 @@ body {
     }
   }
   form {
+    input {
+      color: $blanco;
+    }
     button {
+      color: $blanco;
       &:active,
       &:hover {
         background-color: $amarillo;
+        color: $negro;
+        font-weight: 500;
       }
     }
   }
 }
-.button_shopnow {
-  button {
-    &:active,
-    &:hover {
-      background-color: $amarillo;
-    }
-  }
-}
+
 .navbar-brand {
   img {
     @extend .image-logo;
@@ -41,7 +41,8 @@ body {
 .title-home {
   font-size: calc(1.525rem + 3.3vw);
 }
-.img-home-1 {
+.img-home-1,
+#image-home {
   display: none;
 }
 .coffee {
@@ -66,19 +67,35 @@ body {
   color: $color2;
   transition: all 0.8s;
 }
+
+@mixin hover-btn-productos($font-weight, $color) {
+  letter-spacing: 0.1rem;
+  font-weight: $font-weight;
+  color: $color;
+  transition: all 0.4s;
+}
 .products-items {
   &:hover {
-    @include hover-tarjets($lightgray, $negro);
+    @include hover-tarjets($blanco, $negro);
   }
 }
 .products-items {
   button {
+    color: $negro-2;
     &:hover {
-      letter-spacing: 0.1rem;
-      font-weight: bold;
-      color: $negro !important;
-      transition: all 0.4s;
+      @include hover-btn-productos(bold, $negro);
     }
+  }
+}
+#contactform {
+  input,
+  textarea {
+    border-color: $amarillo-ligth;
+  }
+}
+.list-contact {
+  i {
+    color: $amarillo;
   }
 }
 // Media query
