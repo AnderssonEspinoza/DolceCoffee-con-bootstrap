@@ -15,6 +15,9 @@ body {
       font-size: 18px;
       font-weight: bold;
       color: $blanco;
+      letter-spacing: 0.1rem;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
     }
   }
   form {
@@ -32,7 +35,6 @@ body {
     }
   }
 }
-
 .navbar-brand {
   img {
     @extend .image-logo;
@@ -87,6 +89,28 @@ body {
     }
   }
 }
+.container-descriptionAbout {
+  border-width: 0px 0px 1px 0px;
+  border-style: solid;
+  border-color: $amarillo;
+}
+.review-persons {
+  p {
+    line-height: 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 300;
+    text-align: justify;
+  }
+}
+.img-saved {
+  width: 50px;
+  height: 40px;
+}
+.person {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
 #contactform {
   input,
   textarea {
@@ -96,6 +120,156 @@ body {
 .list-contact {
   i {
     color: $amarillo;
+  }
+}
+// logins
+.body-welcome {
+  background-color: $bgcolor-login;
+  color: $blanco;
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+}
+.image-logo,
+.navbar-brand {
+  img {
+    width: 70px;
+    height: 70px;
+  }
+}
+.titles {
+  letter-spacing: 0.12rem;
+  font-size: 40px;
+
+  .title-2 {
+    color: #d3d3eb;
+  }
+}
+.subtitle {
+  span {
+    color: $amarillo;
+  }
+}
+.container-welcome {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  color: $blanco;
+  gap: 0rem;
+  width: 100%;
+}
+.container-img {
+  img {
+    width: 350px;
+    height: 350px;
+  }
+}
+.image {
+  width: 300px;
+  height: 280px;
+}
+.titles_image {
+  gap: 1rem;
+  img {
+    width: 40px;
+    height: 40px;
+  }
+}
+.img-t1 {
+  background-color: $blanco;
+  border-radius: 50%;
+  width: 43px;
+  height: 43px;
+}
+.container_buttons {
+  margin-top: 3rem;
+  gap: 1.5rem;
+  font-size: 0.8rem;
+}
+@mixin button-style {
+  font-family: "Roboto", sans-serif;
+  border: none;
+  width: 160px;
+  background-color: $amarillo-button-login;
+  color: $negro-2;
+  letter-spacing: 0.07rem;
+  height: 35px;
+  border-radius: 0 20%;
+  text-transform: uppercase;
+}
+
+.container_buttons {
+  button {
+    @include button-style();
+  }
+}
+.button-createAccount-login {
+  button {
+    @include button-style();
+  }
+}
+.title-register-login,
+.container-wrapper {
+  margin-top: 50px;
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 1rem;
+    input {
+      background: none;
+      border: none;
+      border-bottom: 1px solid #d3d3eb;
+      padding-bottom: 7px;
+      color: $amarillo;
+    }
+  }
+}
+.button-createAccount-login {
+  margin-top: 3rem;
+  gap: 1rem;
+}
+.main-login {
+  grid-area: 2 / 1 / 3 / 2;
+  gap: 1rem;
+}
+.image-login {
+  img {
+    width: 300px;
+    height: 250px;
+  }
+}
+.button-login {
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+  gap: 1rem;
+}
+.container-wrapper-login {
+  margin-top: 10px;
+}
+.btn-login {
+  margin-top: 0;
+}
+.link-create-account a,
+.button-login a,
+.button-createAccount-login a {
+  text-decoration: none;
+  color: $amarillo;
+}
+::placeholder {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+}
+
+.arrow {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  img {
+    width: 37px;
+    height: 35px;
   }
 }
 // Media query

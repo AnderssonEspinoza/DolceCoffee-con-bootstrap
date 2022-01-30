@@ -1,3 +1,9 @@
+@media (min-width: 576px) {
+  .row-cols-sm-2 > * {
+    flex: 0 0 auto;
+    width: 70%;
+  }
+}
 @media screen and (min-width: 900px) {
   .body-home {
     height: 100vh;
@@ -29,12 +35,11 @@
     height: 310px;
     border-radius: 50%;
   }
-  .img-about-1 {
-    max-width: 520px;
-  }
+  .img-about-1,
   .img-about-2 {
-    max-width: 520px;
+    max-width: 400px;
   }
+
   .logo-about {
     max-width: 350px;
   }
@@ -48,6 +53,25 @@
       }
     }
   }
+
+  .review-persons {
+    width: 450px;
+    padding: 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container-about {
+    display: flex;
+    align-items: center;
+  }
+  .container-descriptionAbout {
+    border: none;
+    border-left: 1px solid $amarillo;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 @media screen and (min-width: 1400px) {
@@ -57,5 +81,9 @@
   .circle {
     width: 410px;
     height: 410px;
+  }
+  .img-about-1,
+  .img-about-2 {
+    max-width: 500px;
   }
 }
