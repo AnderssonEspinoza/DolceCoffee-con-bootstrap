@@ -10,6 +10,11 @@ body {
 
 #menu {
   border-bottom: 1px solid $mostaza;
+  button {
+    span {
+      color: $amarillo;
+    }
+  }
   li {
     a {
       font-size: 18px;

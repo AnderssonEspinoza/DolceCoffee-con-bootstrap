@@ -77,6 +77,10 @@ body {
   border-bottom: 1px solid rgba(247, 216, 169, 0.5);
 }
 
+#menu button span {
+  color: #ffc212;
+}
+
 #menu li a {
   font-size: 18px;
   font-weight: bold;
@@ -431,12 +435,15 @@ body {
   body {
     min-height: 100vh;
   }
-  .nav-item a::after {
-    width: 95%;
-  }
   .review-persons {
     width: 450px;
     padding: 24px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .nav-item a::after {
+    width: 95%;
   }
 }
 
